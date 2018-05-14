@@ -1,0 +1,75 @@
+<h1 mat-dialog-title aling="center">Realizar Pago</h1>
+<h2> Total a pagar: {{data.precioReserva}} €</h2>
+<div mat-dialog-content>
+
+  <mat-tab-group class="demo-tab-group">
+    <mat-tab label="PayPal">
+      <form [formGroup]="payPalForm">
+        <img style="display: block; margin: auto;" src="https://www.jamroom.net/networkmarket/image/market_image/104/large/_v=1513011920"
+          alt="PayPal">
+        <div class="demo-tab-content">
+          <div style="display: grid;">
+            <mat-form-field>
+              <input matInput placeholder="Email" type="email" [(ngModel)]="email" [formControl]="emailFormControl" required>
+              <mat-error *ngIf="emailFormControl.invalid">Por favor ingresa un correo valido</mat-error>
+            </mat-form-field>
+            <mat-form-field>
+              <input matInput placeholder="Contraseña" type="password" [(ngModel)]="password" [formControl]="passwordFormControl" required>
+              <mat-error *ngIf="passwordFormControl.invalid">Por favor ingresa tu contraseña</mat-error>
+            </mat-form-field>
+          </div>
+          <div class="buttons_dialog">
+            <button mat-raised-button (click)="pagar()" color="primary" cdkFocusInitial [mat-dialog-close]="payPalForm.valid" [disabled]="payPalForm.invalid">Pagar</button>
+          </div>
+        </div>
+      </form>
+    </mat-tab>
+    <mat-tab label="Tarjeta">
+      <div class="demo-tab-content">
+        <form class="example-form">
+          <img style="display: block; margin: auto; width: 50%" src="http://www.rallyestampida.com/wp-content/uploads/2016/11/pago-paypal-2-300x126.png"
+            alt="Tarjetas Credito">
+
+          <div style="display: grid;">
+            <mat-form-field>
+              <input matInput placeholder="Numero de tarjeta">
+            </mat-form-field>
+          </div>
+          <table class="example-full-width" cellspacing="0">
+            <p style="color: gray">Fecha de vencimiento:</p>
+            <tr>
+              <td>
+                <mat-form-field>
+                  <input matInput placeholder="Mes">
+                </mat-form-field>
+              </td>
+              <td>
+                <mat-form-field class="example-full-width">
+                  <input matInput placeholder="Año">
+                </mat-form-field>
+              </td>
+            </tr>
+          </table>
+
+          <div style="display: grid;">
+            <mat-form-field>
+              <input matInput placeholder="Nombre">
+            </mat-form-field>
+
+            <mat-form-field>
+              <input matInput placeholder="Dirección">
+            </mat-form-field>
+
+            <mat-form-field>
+              <input matInput placeholder="Correo Electrónico">
+            </mat-form-field>
+          </div>
+
+        </form>
+        <div class="buttons_dialog">
+          <button mat-raised-button color="primary" cdkFocusInitial (click)="pagar()">Pagar</button>
+        </div>
+      </div>
+    </mat-tab>
+  </mat-tab-group>
+</div>

@@ -1,0 +1,13 @@
+button:hover, .material-icons:hover{
+  background-color: rgba(235, 233, 233, 0.918);
+  color: rgb(1, 22, 90) !important;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.mat-card{
+  margin-top: 10px;
+}

@@ -1,0 +1,16 @@
+.span-aling-spacer {
+  flex: 1 1 auto;
+}
+
+.mat-toolbar{
+  margin-bottom: 10px;
+}
+
+img{
+  display: flex;
+  height: stretch;
+}
+
+.greenText {
+  color: 	#80ff00;
+}

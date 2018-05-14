@@ -1,0 +1,19 @@
+<mat-toolbar color="primary">
+  <button mat-button (click)="home()">
+    <img src="../../assets/hotelporhoras.jpg">
+  </button>
+  <span class="span-aling-spacer"></span>
+  <div *ngIf="isAuthenticated(); then userLogin; else buttonLogin"></div>
+  <ng-template #userLogin>
+    <span class="greenText">Hola, {{getLoginUsuario()}}</span>
+    <mat-icon>person_outline</mat-icon>
+  </ng-template>
+  <ng-template #buttonLogin>
+    <button mat-button (click)="login()">
+      <span>Iniciar sesión</span>
+      <mat-icon>person_outline</mat-icon>
+    </button>
+  </ng-template>
+</mat-toolbar>
+
+<router-outlet></router-outlet>

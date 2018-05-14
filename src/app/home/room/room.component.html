@@ -1,0 +1,18 @@
+<div class="info-card-container">
+  <mat-card *ngFor='let room of data'>
+    <img mat-card-image
+         src="{{room.imagen}}"
+         alt="Photo of a Shiba Inu">
+    <mat-card-title>{{room.tipoHabitacion}}</mat-card-title>
+    <mat-card-content>
+      <p>Incluye los servicios de :</p>
+      <p style="text-align: center">{{room.servicios}}</p>
+      <p style="margin:auto; font-size:xx-large; text-align: right;">{{room.precioHora}}€</p>
+    </mat-card-content>
+    <mat-card-actions align="end">
+      <button mat-raised-button color="primary" (click)="reservate(room)">Reservar</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
+
+<router-outlet></router-outlet>

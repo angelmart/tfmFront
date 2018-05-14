@@ -1,0 +1,25 @@
+.material-icons{
+    color: rgb(222, 236, 243);
+}
+
+button:hover, .material-icons:hover{
+    background-color: rgba(235, 233, 233, 0.918);
+    color: rgb(1, 22, 90) !important;
+}
+
+h1{
+    text-align: center;
+    color: rgb(1, 22, 90);
+    font-variant: small-caps;
+
+}
+
+h2{
+    text-align: center;
+    color: rgb(1, 22, 90);
+    font-variant: small-caps;
+}
+
+.buttons_dialog{
+    text-align: center;
+}
